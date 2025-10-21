@@ -1,14 +1,23 @@
-// Carrusel automático (5s)
-document.addEventListener('DOMContentLoaded', function(){
-  const slides = document.querySelectorAll('.carousel-slide');
-  let idx = 0;
-  if(slides.length){
-    setInterval(()=> {
-      slides[idx].classList.remove('active');
-      idx = (idx+1) % slides.length;
-      slides[idx].classList.add('active');
-    }, 5000);
+// --- Carrusel automático de inicio ---
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll("#carousel .slides img");
+  let currentIndex = 0;
+
+  // Mostrar solo la primera al inicio
+  slides.forEach((img, i) => {
+    img.style.display = i === 0 ? "block" : "none";
+  });
+
+  function nextSlide() {
+    slides[currentIndex].style.display = "none";
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].style.display = "block";
   }
+
+  // Cambiar cada 5 segundos
+  setInterval(nextSlide, 5000);
+});
+
 
   // Popup citas
   const openBtns = [document.getElementById('openCitas'), document.getElementById('citasBtn')].filter(Boolean);
@@ -42,3 +51,4 @@ document.addEventListener('DOMContentLoaded', function(){
     }, 5000);
   }
 });
+
