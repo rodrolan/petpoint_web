@@ -1,145 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PET POINT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PET POINT | Peluquería Canina en Avilés</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/whatsapp.png">
 </head>
+
 <body>
-
-  <header class="header">
-    <div class="header-left">
-      <h1>PET POINT</h1>
-    </div>
-
-    <div class="header-center">
-      <nav class="nav">
-        <a href="#inicio">INICIO</a>
-        <a href="#nosotros">NOSOTROS</a>
-        <a href="#servicios">SERVICIOS</a>
-        <a href="#citas" id="citasBtn">CITAS</a>
-        <a href="#opiniones">RESEÑAS</a>
-        <a href="#contacto">CONTACTO</a>
-      </nav>
-      <div class="info-bar">
-        📍 C. Reyes Católicos, 33403 Avilés, Asturias &nbsp;|&nbsp; 🕐 Lunes a viernes de 10:00 a 18:00
-      </div>
-    </div>
-
-    <div class="header-right social-icons">
-      <a class="icon instagram" href="https://www.instagram.com/petpoint.es/" target="_blank" aria-label="Instagram"></a>
-      <a class="icon facebook" href="#" target="_blank" aria-label="Facebook"></a>
-      <a class="icon whatsapp" href="https://wa.me/34698448103" target="_blank" aria-label="WhatsApp"></a>
-    </div>
+  <!-- =====================
+       HEADER / MENÚ
+  ====================== -->
+  <header id="header">
+    <div class="logo">PET POINT</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#opiniones">Reseñas</a>
+      <a href="#citas">Citas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <!-- Sub-nav spacer so header doesn't cover content -->
-  <div class="header-spacer"></div>
-
-  <!-- Inicio / Carrusel -->
-  <section id="inicio" class="section section-hero">
-  <div class="carousel" id="carousel">
-  <div class="slides">
-    <img src="images/border_collie.jpg" alt="Border Collie">
-    <img src="images/golden_retriever.jpg" alt="Golden Retriever">
-    <img src="images/husky.jpg" alt="Husky">
-    <img src="images/pomerania.jpg" alt="Pomerania">
-  </div>
-</div>
-
-
+  <!-- =====================
+       INICIO / CARRUSEL
+  ====================== -->
+  <section id="inicio" class="hero">
+    <div class="carousel">
+      <img src="images/hero1.jpg" alt="Border Collie">
+      <img src="images/hero2.jpg" alt="Golden Retriever">
+      <img src="images/hero3.jpg" alt="Husky Siberiano">
+      <img src="images/hero4.jpg" alt="Caniche Poodle">
+    </div>
     <div class="hero-text">
-      <h2>CUIDAMOS A TU PELUDO, CON AMOR Y EXPERIENCIA</h2>
-      <div class="hero-buttons">
-        <button class="btn" id="openCitas">AGENDAR CITA</button>
-        <a class="btn" href="tel:+34698448103">LLAMA AHORA</a>
-        <a class="btn" href="https://wa.me/34698448103" target="_blank">WHATSAPP</a>
-      </div>
+      <h1>CUIDAMOS A TU PELUDO, CON AMOR Y EXPERIENCIA</h1>
     </div>
   </section>
 
-  <!-- Nosotros -->
-  <section id="nosotros" class="section section-nosotros">
-    <h2 class="section-title">NOSOTROS</h2>
-    <div class="nosotros-container">
-      <div class="nosotros-text">
-        <p>En <strong>Pet Point</strong> llevamos más de <strong>10 años de experiencia</strong> cuidando la imagen y el bienestar de las mascotas. Nuestra filosofía se basa en el <strong>trato amoroso, cercano y profesional</strong> tanto con los perros como con sus dueños. Cada peludo que entra a nuestra peluquería es tratado con respeto, paciencia y cariño, garantizando una experiencia positiva para ellos y tranquilidad para sus familias.</p>
-      </div>
-      <div class="nosotros-img">
-        <img src="images/peluquera.jpg" alt="Peluquera canina">
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="section section-servicios">
-    <h2 class="section-title">SERVICIOS</h2>
+  <!-- =====================
+       SERVICIOS
+  ====================== -->
+  <section id="servicios" class="section">
+    <h2>NUESTROS SERVICIOS</h2>
     <div class="servicios-grid">
       <div class="servicio">
-        <img src="images/caniche.jpg" alt="Baño y Secado">
+        <img src="images/servicio1.jpg" alt="Baño y Secado">
         <h3>Baño y Secado</h3>
       </div>
       <div class="servicio">
-        <img src="images/bulldog.jpg" alt="Deslanado">
-        <h3>Deslanado</h3>
+        <img src="images/servicio2.jpg" alt="Corte de Pelo Profesional">
+        <h3>Corte Profesional</h3>
       </div>
       <div class="servicio">
-        <img src="images/golden_retriever.jpg" alt="Limpieza">
-        <h3>Limpieza e higiene</h3>
-      </div>
-      <div class="servicio">
-        <img src="images/husky.jpg" alt="Corte de uñas">
-        <h3>Corte de uñas</h3>
-      </div>
-      <div class="servicio">
-        <img src="images/pomerania.jpg" alt="Tratamientos">
-        <h3>Tratamientos especiales</h3>
+        <img src="images/servicio3.jpg" alt="Limpieza e Higiene">
+        <h3>Limpieza e Higiene</h3>
       </div>
     </div>
   </section>
 
-  <!-- Opiniones -->
-  <section id="opiniones" class="section section-opiniones">
-    <h2 class="section-title">OPINIONES</h2>
-    <div class="opiniones-container">
-      <div class="opinion active">“Excelente trato, mi perro salió feliz y precioso. ¡Repetiremos sin duda!”</div>
+  <!-- =====================
+       NOSOTROS
+  ====================== -->
+  <section id="nosotros" class="section">
+    <h2>SOBRE NOSOTROS</h2>
+    <div class="nosotros-content">
+      <p>
+        En <strong>Pet Point</strong> contamos con más de <strong>10 años de experiencia</strong> 
+        dedicados al cuidado y bienestar de tu mascota.  
+        Nos caracteriza un trato <strong>amoroso, paciente y profesional</strong> con cada perro y con sus familias.  
+        Creemos que cada peludo merece una experiencia agradable, donde se sienta seguro y querido.  
+        Utilizamos productos de la más alta calidad y técnicas modernas que garantizan los mejores resultados.
+      </p>
+      <img src="images/peluquera.jpg" alt="Peluquera canina en acción">
+    </div>
+  </section>
+
+  <!-- =====================
+       OPINIONES
+  ====================== -->
+  <section id="opiniones" class="section">
+    <h2>OPINIONES DE NUESTROS CLIENTES</h2>
+    <div class="opinion-slider">
+      <div class="opinion">“Excelente trato, mi perro salió feliz y precioso. ¡Repetiremos sin duda!”</div>
       <div class="opinion">“Llevé a mi golden por recomendación, y el resultado fue espectacular.”</div>
       <div class="opinion">“Trato inmejorable, se nota que aman lo que hacen. 100% recomendable.”</div>
-
-      <div class="valoracion">⭐️⭐️⭐️⭐️⭐️ 4.5 / 5</div>
-      <a class="google-link" href="https://share.google.com/z0hj6FbbWFCmIBUVj" target="_blank">Ver todas nuestras reseñas en Google</a>
     </div>
+    <div class="valoracion">⭐️⭐️⭐️⭐️⭐️ 4.5 / 5</div>
+    <a class="google-link" href="https://share.google.com/z0hj6FbbWFCmIBUVj" target="_blank">Ver todas nuestras reseñas en Google</a>
   </section>
 
-  <!-- Contacto / Footer -->
-  <footer id="contacto" class="section section-contacto">
+  <!-- =====================
+       CITAS / RESERVAS
+  ====================== -->
+  <section id="citas" class="section">
+    <h2>RESERVA TU CITA</h2>
+    <button id="open-popup" class="btn">Agendar por WhatsApp</button>
+  </section>
+
+  <!-- POPUP DE RESERVA -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h3>Agendar Cita</h3>
+      <input type="text" id="nombre" placeholder="Tu nombre">
+      <input type="text" id="raza" placeholder="Raza del perro">
+      <input type="date" id="fecha">
+      <button id="send-btn">Enviar por WhatsApp</button>
+      <button id="close-popup">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- =====================
+       CONTACTO / FOOTER
+  ====================== -->
+  <footer id="contacto" class="contacto">
     <p>📍 C. Reyes Católicos, 33403 Avilés, Asturias</p>
+    <p>🕐 Lunes a Viernes de 10:00 a 18:00</p>
     <p>📞 <a href="tel:+34698448103">Llama ahora: 698 448 103</a></p>
     <p>
       <a href="https://www.instagram.com/petpoint.es/" target="_blank">Instagram</a> |
       <a href="#" target="_blank">Facebook</a> |
       <a href="https://wa.me/34698448103" target="_blank">WhatsApp</a>
     </p>
-    <p><a href="https://www.google.com/maps?q=C.+Reyes+Cat%C3%B3licos,+33403+Avil%C3%A9s,+Asturias" target="_blank">Google Maps</a> | <a href="https://waze.com/ul?q=Pet%20Point%20Aviles" target="_blank">Waze</a></p>
     <p>© 2025 Pet Point — Todos los derechos reservados.</p>
   </footer>
 
-  <div id="popupOverlay" class="popup-overlay" aria-hidden="true">30
-    <div class="popup">
-      <h3>Agendar Cita</h3>
-      <input id="p_nombre" type="text" placeholder="Tu nombre" />
-      <input id="p_telefono" type="tel" placeholder="Tu teléfono" />
-      <input id="p_raza" type="text" placeholder="Raza del perro" />
-      <input id="p_fecha" type="date" />
-      <button id="sendWhatsapp" class="btn">Enviar por WhatsApp</button>
-      <button id="closePopup" class="btn ghost">Cancelar</button>
-    </div>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <div id="whatsapp-btn">
+    <img src="images/whatsapp.png" alt="WhatsApp">
   </div>
 
   <script src="js/main.js" defer></script>
 </body>
 </html>
-
-
-
