@@ -88,7 +88,7 @@ header nav a:hover {
 
 .hero-text {
   position: relative;
-  margin-top: 20px; 
+  margin-top: 100px; 
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.5);
@@ -333,6 +333,7 @@ footer {
     max-width: 350px;
   }
 }
+
 
 
 
