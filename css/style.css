@@ -75,3 +75,23 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .header-spacer{height:190px}
   .carousel{height:45vh}
 }
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carousel .slides img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel .slides img:first-child {
+  display: block;
+}
