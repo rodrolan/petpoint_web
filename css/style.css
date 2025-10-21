@@ -88,7 +88,7 @@ header nav a:hover {
 
 .hero-text {
   position: absolute;
-  bottom: 25%;
+  bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -343,3 +343,4 @@ footer {
     max-width: 350px;
   }
 }
+
