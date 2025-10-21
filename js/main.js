@@ -1,54 +1,83 @@
-// --- Carrusel automático de inicio ---
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll("#carousel .slides img");
-  let currentIndex = 0;
+/* ==========================
+   CARRUSEL AUTOMÁTICO
+========================== */
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel img');
+if (slides.length > 0) {
+  slides[0].classList.add('active');
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 5000);
+}
 
-  // Mostrar solo la primera al inicio
-  slides.forEach((img, i) => {
-    img.style.display = i === 0 ? "block" : "none";
+/* ==========================
+   OPINIONES AUTOMÁTICAS
+========================== */
+let currentOpinion = 0;
+const opinions = document.querySelectorAll('.opinion');
+if (opinions.length > 0) {
+  opinions[0].classList.add('active');
+  setInterval(() => {
+    opinions[currentOpinion].classList.remove('active');
+    currentOpinion = (currentOpinion + 1) % opinions.length;
+    opinions[currentOpinion].classList.add('active');
+  }, 6000);
+}
+
+/* ==========================
+   CABECERA OCULTA AL SCROLL
+========================== */
+let lastScroll = 0;
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    header.classList.add('hidden');
+  } else {
+    header.classList.remove('hidden');
+  }
+  lastScroll = currentScroll;
+});
+
+/* ==========================
+   POPUP DE CITA / WHATSAPP
+========================== */
+const popup = document.getElementById('popup');
+const openPopupBtn = document.getElementById('open-popup');
+const closePopupBtn = document.getElementById('close-popup');
+const sendBtn = document.getElementById('send-btn');
+
+if (openPopupBtn) {
+  openPopupBtn.addEventListener('click', () => {
+    popup.style.display = 'flex';
   });
+}
 
-  function nextSlide() {
-    slides[currentIndex].style.display = "none";
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].style.display = "block";
-  }
+if (closePopupBtn) {
+  closePopupBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+}
 
-  // Cambiar cada 5 segundos
-  setInterval(nextSlide, 5000);
-});
+if (sendBtn) {
+  sendBtn.addEventListener('click', () => {
+    const nombre = document.getElementById('nombre').value.trim();
+    const raza = document.getElementById('raza').value.trim();
+    const fecha = document.getElementById('fecha').value;
+    const telefono = "+34698448103";
+    const mensaje = `Hola, soy ${nombre}. Quisiera reservar una cita para mi perro de raza ${raza} el día ${fecha}.`;
+    window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, '_blank');
+  });
+}
 
-
-  // Popup citas
-  const openBtns = [document.getElementById('openCitas'), document.getElementById('citasBtn')].filter(Boolean);
-  const overlay = document.getElementById('popupOverlay');
-  const closeBtn = document.getElementById('closePopup');
-  openBtns.forEach(b => b && b.addEventListener('click', () => { overlay.style.display = 'flex'; overlay.setAttribute('aria-hidden','false'); }));
-  closeBtn && closeBtn.addEventListener('click', () => { overlay.style.display = 'none'; overlay.setAttribute('aria-hidden','true'); });
-  overlay && overlay.addEventListener('click', (e)=>{ if(e.target === overlay) { overlay.style.display='none'; overlay.setAttribute('aria-hidden','true'); } });
-
-  // Enviar por WhatsApp desde popup
-  const sendBtn = document.getElementById('sendWhatsapp');
-  if(sendBtn){
-    sendBtn.addEventListener('click', ()=> {
-      const nombre = document.getElementById('p_nombre').value || '---';
-      const telefono = document.getElementById('p_telefono').value || '---';
-      const raza = document.getElementById('p_raza').value || '---';
-      const fecha = document.getElementById('p_fecha').value || '---';
-      const text = `Hola, soy ${nombre}. Deseo agendar una cita para mi perro (${raza}) el ${fecha}. Mi teléfono: ${telefono}.`;
-      window.open(`https://wa.me/34698448103?text=${encodeURIComponent(text)}`, '_blank');
-    });
-  }
-
-  // Reseñas rotativas
-  const opiniones = document.querySelectorAll('.opinion');
-  let r = 0;
-  if(opiniones.length){
-    setInterval(()=> {
-      opiniones[r].classList.remove('active');
-      r = (r+1) % opiniones.length;
-      opiniones[r].classList.add('active');
-    }, 5000);
-  }
-});
-
+/* ==========================
+   BOTÓN FLOTANTE WHATSAPP
+========================== */
+const whatsappBtn = document.getElementById('whatsapp-btn');
+if (whatsappBtn) {
+  whatsappBtn.addEventListener('click', () => {
+    window.open('https://wa.me/34698448103', '_blank');
+  });
+}
