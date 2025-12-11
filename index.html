@@ -54,6 +54,8 @@
   </style>
 </head>
 <body>
+
+  <!-- Encabezado -->
   <header style="display:flex; justify-content:space-between; align-items:center; padding:20px;">
     <img src="PETPOINT_WEB.png" alt="Logo Pet Point" style="width:160px; height:auto;" />
 
@@ -69,9 +71,31 @@
       </a>
     </div>
   </header>
-  <section class="section">
-    <button onclick="window.open('https://wa.me/34684622318','_blank')" style="display:block; margin:20px auto; padding:12px 25px; font-size:1rem; background:#25d366; color:white; border:none; border-radius:8px; cursor:pointer;">Reservar cita</button>
 
+  <!-- Sección principal -->
+  <section class="section">
+
+    <!-- Banner centrado -->
+    <div style="text-align:center; margin-bottom:25px;">
+      <img src="BANNER_WEB.png" alt="Banner Pet Point"
+           style="max-width:400px; width:100%; height:auto;">
+    </div>
+
+    <!-- Botón de reserva rojo -->
+    <button onclick="window.open('https://wa.me/34684622318','_blank')" 
+            style="display:block; 
+                   margin:20px auto; 
+                   padding:12px 25px; 
+                   font-size:1rem; 
+                   background:#e4273d; 
+                   color:white; 
+                   border:none; 
+                   border-radius:8px; 
+                   cursor:pointer;">
+        Reservar cita
+    </button>
+
+    <!-- Lista de servicios -->
     <h2>Servicios</h2>
     <div class="services">
       <div class="card">Baño</div>
@@ -84,6 +108,7 @@
     </div>
   </section>
 
+  <!-- Sección de información -->
   <section class="section" style="background:black; color:white; text-align:center; padding:40px 20px; margin-top:40px;">
     <h2 style="color:white; text-align:center;">Información</h2>
     <p><strong>Dirección:</strong> Tr.ª Diego de Almagro, 5, 33403 Avilés, Asturias</p>
@@ -91,8 +116,3 @@
     <p><strong>Teléfono:</strong> 684622318</p>
   </section>
 
-  <footer>
-    © 2025 Pet Point — Todos los derechos reservados
-  </footer>
-</body>
-</html>
