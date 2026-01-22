@@ -6,106 +6,154 @@
   <title>Pet Point | Peluquería Canina</title>
 
   <!-- SEO LOCAL -->
-  <meta name="description" content="Peluquería canina en España. Amor y estilo para tu peludo. Reserva tu cita por WhatsApp." />
-  <meta name="keywords" content="peluquería canina, grooming perros, cortar pelo perros, peluquería canina cerca" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Pet Point | Peluquería Canina" />
-  <meta property="og:description" content="Amor y estilo para tu peludo" />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Peluquería canina. Amor y estilo para tu peludo. Reserva tu cita por WhatsApp." />
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#000000" />
-
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
-    :root { --bg:#fff; --text:#000; --border:#000; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg:#000; --text:#fff; --border:#fff; }
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --border: #000000;
     }
-    * { box-sizing:border-box; margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
-    body { background:var(--bg); color:var(--text); min-height:100vh; display:flex; justify-content:center; align-items:center; }
-    .container { max-width:420px; width:100%; padding:32px 20px; text-align:center; }
-    .logo { width:120px; height:120px; border-radius:50%; margin-bottom:18px; }
-    .slogan { margin-bottom:28px; }
-    .social-icons { display:flex; justify-content:center; gap:28px; margin-bottom:36px; }
-    .social-icons a {
+
+    body.dark {
+      --bg: #000000;
+      --text: #ffffff;
+      --border: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
       color: var(--text);
-      font-size: 1.6rem;
-      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
-      display: inline-flex;
-      align-items: center;
+      min-height: 100vh;
+      display: flex;
       justify-content: center;
+      align-items: center;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      border: 2px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 100%;
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 18px;
+    }
+
+    .slogan {
+      margin-bottom: 28px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .social-icons a {
       width: 44px;
       height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 50%;
+      font-size: 1.4rem;
       text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .social-icons a.instagram { background: #E1306C; color: #fff; }
+    .social-icons a.whatsapp { background: #25D366; color: #fff; }
+    .social-icons a.phone { background: #007AFF; color: #fff; }
 
     .social-icons a:hover {
-      transform: scale(1.2);
-      opacity: 0.8;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transform: scale(1.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
 
-    .social-icons a:active {
-      transform: scale(0.9);
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
-    .links { display:flex; flex-direction:column; gap:16px; }
-    .link-button { padding:16px; border:2px solid var(--border); border-radius:999px; text-decoration:none; color:var(--text); font-weight:600; display:flex; justify-content:center; gap:12px; }
-    .link-button:hover { background:var(--text); color:var(--bg); }
+
+    .link-button {
+      padding: 16px;
+      border: 2px solid var(--border);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .link-button:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
   </style>
 </head>
 <body>
 
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 / ☀️</button>
+
   <div class="container">
     <img src="logo.png" alt="Pet Point" class="logo" />
+
     <p class="slogan">Amor y estilo para tu peludo 🐶✨</p>
 
     <div class="social-icons">
-      <a href="https://instagram.com/petpoint.es" onclick="track('instagram_icon')"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/34684622318" onclick="track('whatsapp_icon')"><i class="fab fa-whatsapp"></i></a>
-      <a href="tel:+34684622318" onclick="track('call_icon')"><i class="fas fa-phone"></i></a>
+      <a href="https://instagram.com/petpoint.es" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/34684622318" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+34684622318" class="phone"><i class="fas fa-phone"></i></a>
     </div>
 
     <div class="links">
-      <a href="https://wa.me/34684622318" class="link-button" onclick="track('reservar_cita')"><i class="fas fa-calendar-check"></i>Reservar cita</a>
-      <a href="https://instagram.com/petpoint.es" class="link-button" onclick="track('instagram_boton')"><i class="fab fa-instagram"></i>Instagram</a>
-      <a href="https://maps.app.goo.gl/HBhJHxvmzoCAk48C7" class="link-button" onclick="track('ubicacion')"><i class="fas fa-location-dot"></i>Ubicación</a>
+      <a href="https://wa.me/34684622318" class="link-button"><i class="fas fa-calendar-check"></i>Reservar cita</a>
+      <a href="https://instagram.com/petpoint.es" class="link-button"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="https://maps.app.goo.gl/HBhJHxvmzoCAk48C7" class="link-button"><i class="fas fa-location-dot"></i>Ubicación</a>
     </div>
   </div>
 
   <script>
-    function track(event) {
-      if (typeof fbq !== 'undefined') fbq('trackCustom', event);
-      if (typeof gtag !== 'undefined') gtag('event', event);
-    }
-
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
     }
   </script>
 
