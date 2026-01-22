@@ -3,116 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pet Point</title>
+  <title>Pet Point | Peluquería Canina</title>
+
+  <!-- SEO LOCAL -->
+  <meta name="description" content="Peluquería canina en España. Amor y estilo para tu peludo. Reserva tu cita por WhatsApp." />
+  <meta name="keywords" content="peluquería canina, grooming perros, cortar pelo perros, peluquería canina cerca" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pet Point | Peluquería Canina" />
+  <meta property="og:description" content="Amor y estilo para tu peludo" />
+  <meta property="og:type" content="website" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #000000;
+    :root { --bg:#fff; --text:#000; --border:#000; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#000; --text:#fff; --border:#fff; }
     }
-    header {
-      background: none;
-      padding: 20px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
+    * { box-sizing:border-box; margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
+    body { background:var(--bg); color:var(--text); min-height:100vh; display:flex; justify-content:center; align-items:center; }
+    .container { max-width:420px; width:100%; padding:32px 20px; text-align:center; }
+    .logo { width:120px; height:120px; border-radius:50%; margin-bottom:18px; }
+    .slogan { margin-bottom:28px; }
+    .social-icons { display:flex; justify-content:center; gap:28px; margin-bottom:36px; }
+    .social-icons a {
+      color: var(--text);
+      font-size: 1.6rem;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      text-decoration: none;
     }
-    .hero {
-      background: none;
-      height: auto;
-      text-align: center;
-      padding: 40px 0;
-      font-size: 1.5rem;
-      font-weight: normal;
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
-    .section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+
+    .social-icons a:active {
+      transform: scale(0.9);
     }
-    h2 {
-      text-align: left;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-    .services {
-      display: block;
-    }
-    .card {
-      background: none;
-      padding: 10px 0;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    footer {
-      background: none;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #666;
-    }
+    .links { display:flex; flex-direction:column; gap:16px; }
+    .link-button { padding:16px; border:2px solid var(--border); border-radius:999px; text-decoration:none; color:var(--text); font-weight:600; display:flex; justify-content:center; gap:12px; }
+    .link-button:hover { background:var(--text); color:var(--bg); }
   </style>
 </head>
 <body>
 
-  <!-- Encabezado -->
-  <header style="display:flex; justify-content:space-between; align-items:center; padding:20px;">
-    <img src="PETPOINT_WEB.png" alt="Logo Pet Point" style="width:160px; height:auto;" />
+  <div class="container">
+    <img src="logo.png" alt="Pet Point" class="logo" />
+    <p class="slogan">Amor y estilo para tu peludo 🐶✨</p>
 
-    <div style="text-align:right;">
-      <a href="https://instagram.com/petpoint.es" target="_blank" style="margin-left:15px; display:inline-block;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="35" />
-      </a>
-      <a href="tel:684622318" style="margin-left:15px; display:inline-block;">
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" width="35" />
-      </a>
-      <a href="https://wa.me/34684622318" target="_blank" style="margin-left:15px; display:inline-block;">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="35" />
-      </a>
-    </div>
-  </header>
-
-  <!-- Sección principal -->
-  <section class="section">
-
-    <!-- Banner centrado -->
-    <div style="text-align:center; margin-bottom:25px;">
-      <img src="BANNER_WEB.png" alt="Banner Pet Point"
-           style="max-width:400px; width:100%; height:auto;">
+    <div class="social-icons">
+      <a href="https://instagram.com/petpoint.es" onclick="track('instagram_icon')"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/34684622318" onclick="track('whatsapp_icon')"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+34684622318" onclick="track('call_icon')"><i class="fas fa-phone"></i></a>
     </div>
 
-    <!-- Botón de reserva rojo -->
-    <button onclick="window.open('https://wa.me/34684622318','_blank')" 
-            style="display:block; 
-                   margin:20px auto; 
-                   padding:12px 25px; 
-                   font-size:1rem; 
-                   background:#e4273d; 
-                   color:white; 
-                   border:none; 
-                   border-radius:8px; 
-                   cursor:pointer;">
-        Reservar cita
-    </button>
-
-    <!-- Lista de servicios -->
-    <h2>Servicios</h2>
-    <div class="services">
-      <div class="card">Baño</div>
-      <div class="card">Cepillado</div>
-      <div class="card">Corte higiénico</div>
-      <div class="card">Deslanado (si es necesario)</div>
-      <div class="card">Corte de uñas</div>
-      <div class="card">Vaciado de glándulas (si es necesario)</div>
-      <div class="card">Limpieza de oídos y almohadillas</div>
+    <div class="links">
+      <a href="https://wa.me/34684622318" class="link-button" onclick="track('reservar_cita')"><i class="fas fa-calendar-check"></i>Reservar cita</a>
+      <a href="https://instagram.com/petpoint.es" class="link-button" onclick="track('instagram_boton')"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="https://maps.app.goo.gl/HBhJHxvmzoCAk48C7" class="link-button" onclick="track('ubicacion')"><i class="fas fa-location-dot"></i>Ubicación</a>
     </div>
-  </section>
+  </div>
 
-  <!-- Sección de información -->
-  <section class="section" style="background:black; color:white; text-align:center; padding:40px 20px; margin-top:40px;">
-    <h2 style="color:white; text-align:center;">Información</h2>
-    <p><strong>Dirección:</strong> Tr.ª Diego de Almagro, 5, 33403 Avilés, Asturias</p>
-    <p><strong>Horario:</strong> Lunes a Viernes de 09:00 a 14:00</p>
-    <p><strong>Teléfono:</strong> 684622318</p>
-  </section>
+  <script>
+    function track(event) {
+      if (typeof fbq !== 'undefined') fbq('trackCustom', event);
+      if (typeof gtag !== 'undefined') gtag('event', event);
+    }
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+
+</body>
+</html>
